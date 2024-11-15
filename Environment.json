@@ -1,0 +1,63 @@
+{
+	"id": "16a6cee6-7b5d-4325-a797-3e564a5bbfff",
+	"name": "Production",
+	"values": [
+		{
+			"key": "Base_URL",
+			"value": "https://reqres.in",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "User_Mail",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "User_first_name",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "User_last_name",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "User_name",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "User_Job",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "Login_Token",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "Register_Token",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "Register_Id",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-11-12T23:53:52.201Z",
+	"_postman_exported_using": "Postman/11.19.0"
+}
