@@ -28,8 +28,8 @@ jobs:
       # Run Postman Collection with environment file and generate HTML report
       - name: Run Postman Collection
         run: |
-          newman run C:\Users\lenovo\Documents\Api_Projects\Reqress\Collection.json \
-            --environment C:\Users\lenovo\Documents\Api_Projects\Reqress\Environment.json \
+          newman run C:\Users\lenovo\AppData\Roaming\npm\Collection.json \
+            --environment C:\Users\lenovo\AppData\Roaming\npm\Environment.json \
             --reporters cli,html \
             --reporter-html-export newman-report.html
 
