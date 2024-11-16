@@ -1,4 +1,4 @@
-name: Run Postman Collection on Windows
+name: Run Postman Collection on Windowss
 
 on:
   workflow_dispatch:
