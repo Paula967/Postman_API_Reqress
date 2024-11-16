@@ -9,31 +9,35 @@ jobs:
 
     steps:
       # Checkout the repository
-      - name: Checkout Code
-        uses: actions/checkout@v3
+       - name: Checkout Code
+         uses: actions/checkout@v3
 
       # Setup Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
+       - name: Setup Node.js
+         uses: actions/setup-node@v3
+         with:
+           node-version: '16'
 
-      # Install Newman
-      - name: Install Newman
-        run: npm install -g newman
+     # Install Newman and HTML Reporter
+       - name: Install Newman and HTML Reporter
+         shell: pwsh
+         run: |
+             npm install -g newman `
+             && npm install -g newman-reporter-html
+
 
       # Run Postman Collection with PowerShell
-      - name: Run Postman Collection
-        shell: pwsh
-        run: |
+       - name: Run Postman Collection
+         shell: pwsh
+         run: |
           newman run ".\Collection.json" `
             --environment ".\Environment.json" `
             --reporters cli,html `
             --reporter-html-export ".\newman-report.html"
 
       # Upload the HTML report
-      - name: Upload HTML Report
-        uses: actions/upload-artifact@v3
-        with:
+       - name: Upload HTML Report
+         uses: actions/upload-artifact@v3
+         with:
           name: postman-html-report
           path: newman-report.html
