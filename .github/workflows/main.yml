@@ -34,7 +34,7 @@ jobs:
         run: |
           newman run ".\Collection.json" `
             --environment ".\Environment.json" `
-            --reporters cli,html `
+            --reporters html `
             --reporter-html-export ".\newman-report.html"
 
       # Upload HTML Report as artifact
