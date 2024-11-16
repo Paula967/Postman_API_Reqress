@@ -21,8 +21,11 @@ jobs:
       # Install Newman and HTML Reporter
       - name: Install Newman and HTML Reporter
         shell: pwsh
-        run: |
+        run: 
           npm install -g newman
+      - name: Install Html Reporter
+        shell: pwsh
+        run:
           npm install -g newman-reporter-html
 
       # Run Postman Collection using PowerShell
